@@ -16,7 +16,11 @@
       </synLog>
       <simLog/>
       <mgLog/>
-      <packageLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'doContrast_sitofp_32s_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="doContrastIP" solutionName="solution1" date="2022-03-07T14:39:40.493+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="doContrastIP" solutionName="solution1" date="2022-03-07T14:39:38.636+0100" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="doContrastIP" solutionName="solution1" date="2022-03-07T14:39:36.668+0100" type="Warning"/>
+      </packageLog>
       <csimLog/>
     </logs>
   </warningLogs>

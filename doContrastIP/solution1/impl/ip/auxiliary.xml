@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="doContrast" xd:componentRef="doContrast" xd:initiationInterval="76839" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_ctrl_bus" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="inStream" xd:originalName="inStream" xd:direction="in" xd:interfaceRef="inStream" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="outStream" xd:originalName="outStream" xd:direction="out" xd:interfaceRef="outStream" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="xMin" xd:originalName="xMin" xd:direction="in" xd:interfaceRef="s_axi_ctrl_bus" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="xMax" xd:originalName="xMax" xd:direction="in" xd:interfaceRef="s_axi_ctrl_bus" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="76838" xd:worst-case="76838" xd:average-case="76838"/>
+  <xd:resourceEstimates xd:LUT="1177" xd:FF="885" xd:BRAM="0" xd:DSP="3"/>
+</xd:acceleratorMap>

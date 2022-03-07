@@ -70,7 +70,10 @@
   },
   "HlsSolution": {
     "FlowTarget": "vivado",
-    "DirectiveTcl": ["set_directive_top doContrast -name doContrast"],
+    "ConfigTcl": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "doContrast"
@@ -114,6 +117,9 @@
       "impl\/verilog\/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1.v",
       "impl\/verilog\/doContrast_flow_control_loop_pipe_sequential_init.v",
       "impl\/verilog\/doContrast_fmul_32ns_32ns_32_4_max_dsp_1.v",
+      "impl\/verilog\/doContrast_hls_deadlock_idx0_monitor.v",
+      "impl\/verilog\/doContrast_hls_deadlock_idx1_monitor.v",
+      "impl\/verilog\/doContrast_hls_deadlock_kernel_monitor_top.vh",
       "impl\/verilog\/doContrast_regslice_both.v",
       "impl\/verilog\/doContrast_sitofp_32s_32_6_no_dsp_1.v",
       "impl\/verilog\/doContrast.v"
@@ -783,7 +789,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-03-07 14:25:29 CET",
+    "Time": "2022-03-07 14:39:24 CET",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.2"
   }

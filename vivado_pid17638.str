@@ -1,0 +1,964 @@
+/*
+
+Xilinx Vivado v2021.2 (64-bit) [Major: 2021, Minor: 2]
+SW Build: 3367213 on Tue Oct 19 02:47:39 MDT 2021
+IP Build: 3369179 on Thu Oct 21 08:25:16 MDT 2021
+
+Process ID (PID): 17638
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Mar 07 14:34:59 CET 2022
+Time zone: 	Central European Standard Time (Europe/Berlin)
+
+OS: Ubuntu
+OS Version: 5.4.0-100-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 1
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/tools/Xilinx/Vivado/2021.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/tools/Xilinx/Vivado/2021.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	sam
+User home directory: /home/sam
+User working directory: /home/sam/git_workspace/contrast-adjustment-high-level-synthesis
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2021.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2021.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2021.2/bin
+
+Vivado preferences file: /home/sam/.Xilinx/Vivado/2021.2/vivado.xml
+Vivado preferences directory: /home/sam/.Xilinx/Vivado/2021.2/
+Vivado layouts directory: /home/sam/.Xilinx/Vivado/2021.2/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2021.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/vivado.log
+Vivado journal file: 	/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-17638-sam-HP-Pavilion-Laptop-15-eg0xxx
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2021.2/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2021.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2021.2
+XILINX_SDK: /tools/Xilinx/Vitis/2021.2
+XILINX_VITIS: /tools/Xilinx/Vitis/2021.2
+XILINX_VIVADO: /tools/Xilinx/Vivado/2021.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2021.2
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,991 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,946 MB. GUI used memory: 58 MB. Current time: 3/7/22, 2:35:00 PM CET
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 53 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "contrast_adjustment_vivado"); // aa
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+// [GUI Memory]: 100 MB (+102225kb) [00:01:15]
+// [Engine Memory]: 1,952 MB (+1895823kb) [00:01:15]
+// [GUI Memory]: 106 MB (+1556kb) [00:01:15]
+selectButton("NEXT", "Next >"); // JButton
+// [GUI Memory]: 113 MB (+1868kb) [00:01:17]
+selectTab(PAResourceOtoP.PartChooser_TABBED_PANE, (HResource) null, "Boards", 1); // i
+setText("PAResourceAtoD.BoardChooser_BOARD_TABLE_SEARCH_FIELD", "zybo"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Zybo ; Zybo ; Zybo ; digilentinc.com ; 2.0 ; xc7z010clg400-1 ; 400 ; B.4 ; 100 ; 17600 ; 35200 ; 60 ; 0 ; 80 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 2, "Zybo", 0, false); // ah
+selectButton("NEXT", "Next >"); // JButton
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project contrast_adjustment_vivado /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado -part xc7z010clg400-1 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 120 MB (+1301kb) [00:01:30]
+// WARNING: HEventQueue.dispatchEvent() is taking  1413 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: BOARD_MODIFIED
+// Tcl Message: set_property board_part digilentinc.com:zybo:part0:2.0 [current_project] 
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 83 seconds
+dismissDialog("Create Project"); // bA
+dismissDialog("New Project"); // f
+// HMemoryUtils.trashcanNow. Engine heap size: 2,030 MB. GUI used memory: 62 MB. Current time: 3/7/22, 2:36:25 PM CET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // n
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create Block Design"); // aX
+// TclEventType: LOAD_FEATURE
+// Tcl Message: create_bd_design "design_1" 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Wrote  : </home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.srcs/sources_1/bd/design_1/design_1.bd>  
+// Tcl Message: INFO: [BD 41-2613] The output directory /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1 for design_1 cannot be found. 
+// TclEventType: RSB_OPEN_DIAGRAM
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Create Block Design"); // bA
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // D
+// [Engine Memory]: 2,072 MB (+22504kb) [00:01:47]
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,072 MB. GUI used memory: 67 MB. Current time: 3/7/22, 2:36:40 PM CET
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "zyn"); // OverlayTextField
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "zyn"); // OverlayTextField
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // L
+// TclEventType: LOAD_FEATURE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// JavaFX intialization before: 1646660204160
+// [Engine Memory]: 2,200 MB (+26056kb) [00:01:53]
+// Tcl Message: endgroup 
+// JavaFX initialization after: 1646660204346
+// [Engine Memory]: 2,373 MB (+66184kb) [00:01:53]
+// [GUI Memory]: 127 MB (+870kb) [00:01:55]
+// Elapsed time: 31 seconds
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // D
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "dma"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1, "AXI Direct Memory Access", 0, false); // L
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1, "AXI Direct Memory Access", 0, false); // L
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1); // L
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1, "AXI Direct Memory Access", 0, false, false, false, false, false, true); // L - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 
+// Tcl Message: endgroup 
+// [GUI Memory]: 138 MB (+4385kb) [00:02:51]
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // n
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// WARNING: HEventQueue.dispatchEvent() is taking  1228 ms.
+expandTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6); // B
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP, Repository]", 7, false); // B
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // D
+setFolderChooser("/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist");
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist'. 
+selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK"); // a
+dismissDialog("Add Repository"); // c
+// [GUI Memory]: 149 MB (+3980kb) [00:03:09]
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // D
+setFolderChooser("/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP");
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP'. 
+selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK"); // a
+dismissDialog("Add Repository"); // c
+// [GUI Memory]: 162 MB (+6312kb) [00:03:17]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Settings"); // d
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // D
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "do"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Dohist", 2, "Dohist", 0, false); // L
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // L
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:hls:doHist:1.0 doHist_0 
+// Tcl Message: endgroup 
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // D
+// Elapsed time: 27 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "contr"); // OverlayTextField
+// Elapsed time: 91 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // n
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+selectList(PAResourceQtoS.SettingsProjectIPRepositoryPage_REPOSITORY_CHOOSER, "/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP", 1); // ae
+selectList(PAResourceQtoS.SettingsProjectIPRepositoryPage_REPOSITORY_CHOOSER, "/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP", 1, false, false, false, true, false); // ae - Popup Trigger
+selectMenuItem(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // ao
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist'. 
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // D
+setFolderChooser("/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP");
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP'. 
+selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK"); // a
+dismissDialog("Add Repository"); // c
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Settings"); // d
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // D
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "do"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Dohist", 3, "Dohist", 0, false); // L
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Docontrast", 2, "Docontrast", 0, false); // L
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Docontrast", 2, "Docontrast", 0, false); // L
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Docontrast", 2); // L
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Docontrast", 2, "Docontrast", 0, false, false, false, false, false, true); // L - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// [GUI Memory]: 172 MB (+2205kb) [00:06:06]
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:hls:doContrast:1.0 doContrast_0 
+// Tcl Message: endgroup 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,438 MB. GUI used memory: 100 MB. Current time: 3/7/22, 2:41:00 PM CET
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // D
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 802 seconds
+setText("Width of Buffer Length Register (8-26)", "23"); // B
+selectCheckBox((HResource) null, "Allow Unaligned Transfers", true); // g: TRUE
+selectComboBox("Stream Data Width (c_m_axis_mm2s_tdata_width)", "8", 0); // E
+selectCheckBox((HResource) null, "Allow Unaligned Transfers", true); // g: TRUE
+// Elapsed time: 58 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Re-customize IP"); // r
+// Tcl Command: 'set_property -dict [list CONFIG.c_sg_length_width {23} CONFIG.c_m_axis_mm2s_tdata_width {8} CONFIG.c_include_mm2s_dre {1} CONFIG.c_include_s2mm_dre {1}] [get_bd_cells axi_dma_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.c_sg_length_width {23} CONFIG.c_m_axis_mm2s_tdata_width {8} CONFIG.c_include_mm2s_dre {1} CONFIG.c_include_s2mm_dre {1}] [get_bd_cells axi_dma_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+selectButton("PS-PL Configuration", "PS-PL Configuration"); // j
+expandTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "HP Slave AXI Interface ; HP Slave AXI Interface ; HP Slave AXI Interface", 3); // aw
+selectTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "S AXI HP0 interface ; 0 ; Enables AXI high performance slave interface 0", 4, "0", 1, true); // aw - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Tcl Command: 'set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]'
+dismissDialog("Re-customize IP"); // r
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,460 MB. GUI used memory: 118 MB. Current time: 3/7/22, 2:55:45 PM CET
+// Elapsed time: 27 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_BLOCK_AUTOMATION, "Run Block Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Block Automation"); // O
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0] 
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Run Block Automation"); // bA
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (3 out of 5 selected), doHist_0]", 5, true, true, ui.utils.collection.couples.TriState.True); // ac - Node
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Elapsed time: 93 seconds
+dismissDialog("Run Connection Automation"); // O
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // D
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "bro"); // OverlayTextField
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "broa"); // OverlayTextField
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "broad"); // OverlayTextField
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // L
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_0 
+// Tcl Message: endgroup 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,488 MB. GUI used memory: 118 MB. Current time: 3/7/22, 2:58:10 PM CET
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // D
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "System_zoom_in"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins axis_broadcaster_0/S_AXIS] 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_0/M00_AXIS] [get_bd_intf_pins doContrast_0/inStream] 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_0/M01_AXIS] [get_bd_intf_pins doHist_0/inStream] 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins doContrast_0/outStream] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] 
+// Elapsed time: 454 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (3 out of 6 selected), doHist_0]", 7, true, true, ui.utils.collection.couples.TriState.True); // ac - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // O
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins doHist_0/histo_PORTA] 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins doHist_0/histo_PORTB] 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/doHist_0/s_axi_ctrl_bus} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins doHist_0/s_axi_ctrl_bus] 
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// Tcl Message: Slave segment '/doHist_0/s_axi_ctrl_bus/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>. 
+// Tcl Message: endgroup 
+dismissDialog("Run Connection Automation"); // bA
+// [Engine Memory]: 2,492 MB (+410kb) [00:31:08]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,524 MB. GUI used memory: 119 MB. Current time: 3/7/22, 3:06:00 PM CET
+// Elapsed time: 51 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (1 out of 3 selected), doContrast_0]", 5, true, true, ui.utils.collection.couples.TriState.True); // ac - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // O
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/doContrast_0/s_axi_ctrl_bus} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins doContrast_0/s_axi_ctrl_bus] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment '/doContrast_0/s_axi_ctrl_bus/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4001_0000 [ 64K ]>. 
+dismissDialog("Run Connection Automation"); // bA
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (1 out of 2 selected), axis_broadcaster_0]", 3, true, true, ui.utils.collection.couples.TriState.True); // ac - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // O
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_broadcaster_0/aclk] 
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // O
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE] 
+// Tcl Message: Slave segment '/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x41E0_0000 [ 64K ]>. 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // D
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// [GUI Memory]: 182 MB (+1129kb) [00:32:21]
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "System_zoom_in"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "System_zoom_in"); // D
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets doHist_0_histo_PORTB] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 163 seconds
+dismissDialog("Re-customize IP"); // r
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+dismissDialog("Re-customize IP"); // r
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // D
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "bram"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI BRAM Controller", 0, "AXI BRAM Controller", 0, false); // L
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI BRAM Controller", 0, "AXI BRAM Controller", 0, false); // L
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI BRAM Controller", 0); // L
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI BRAM Controller", 0, "AXI BRAM Controller", 0, false, false, false, false, false, true); // L - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0 
+// Tcl Message: endgroup 
+// Tcl Command: 'set_property location {6 2288 244} [get_bd_cells axi_bram_ctrl_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {6 2288 244} [get_bd_cells axi_bram_ctrl_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// Elapsed time: 18 seconds
+selectComboBox("Number of BRAM interfaces (SINGLE_PORT_BRAM)", "1", 1); // E
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Tcl Command: 'set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]'
+dismissDialog("Re-customize IP"); // r
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0] 
+dismissDialog("Customize IP"); // bA
+// HMemoryUtils.trashcanNow. Engine heap size: 2,545 MB. GUI used memory: 123 MB. Current time: 3/7/22, 3:10:40 PM CET
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins doHist_0_bram/BRAM_PORTB] 
+// Elapsed time: 21 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (1 out of 2 selected), axi_bram_ctrl_0, S_AXI]", 2, false, true, ui.utils.collection.couples.TriState.True); // ac
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // O
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/processing_system7_0/Data' at <0x4002_0000 [ 8K ]>. 
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (3 out of 4 selected), axi_dma_0]", 1, true, true, ui.utils.collection.couples.TriState.True); // ac - Node
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // O
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_MM2S} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] 
+// Tcl Message: Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x4002_0000 [ 8K ]>. Slave segment '/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x41E0_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /axi_dma_0/S_AXI_LITE/Reg from address space /axi_dma_0/Data_MM2S. Slave segment '/doContrast_0/s_axi_ctrl_bus/Reg' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x4001_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /doContrast_0/s_axi_ctrl_bus/Reg from address space /axi_dma_0/Data_MM2S. Slave segment '/doHist_0/s_axi_ctrl_bus/Reg' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x4000_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /doHist_0/s_axi_ctrl_bus/Reg from address space /axi_dma_0/Data_MM2S. 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x4002_0000 [ 8K ]>. Slave segment '/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x41E0_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /axi_dma_0/S_AXI_LITE/Reg from address space /axi_dma_0/Data_S2MM. Slave segment '/doContrast_0/s_axi_ctrl_bus/Reg' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x4001_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /doContrast_0/s_axi_ctrl_bus/Reg from address space /axi_dma_0/Data_S2MM. Slave segment '/doHist_0/s_axi_ctrl_bus/Reg' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x4000_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /doHist_0/s_axi_ctrl_bus/Reg from address space /axi_dma_0/Data_S2MM. 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_SG} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_SG] 
+// Tcl Message: Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/axi_dma_0/Data_SG' at <0x4002_0000 [ 8K ]>. Slave segment '/axi_dma_0/S_AXI_LITE/Reg' is being assigned into address space '/axi_dma_0/Data_SG' at <0x41E0_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /axi_dma_0/S_AXI_LITE/Reg from address space /axi_dma_0/Data_SG. Slave segment '/doContrast_0/s_axi_ctrl_bus/Reg' is being assigned into address space '/axi_dma_0/Data_SG' at <0x4001_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /doContrast_0/s_axi_ctrl_bus/Reg from address space /axi_dma_0/Data_SG. Slave segment '/doHist_0/s_axi_ctrl_bus/Reg' is being assigned into address space '/axi_dma_0/Data_SG' at <0x4000_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /doHist_0/s_axi_ctrl_bus/Reg from address space /axi_dma_0/Data_SG. 
+// Tcl Message: endgroup 
+dismissDialog("Run Connection Automation"); // bA
+// Elapsed time: 81 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // O
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins doHist_0/histo_PORTB] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,576 MB. GUI used memory: 122 MB. Current time: 3/7/22, 3:12:50 PM CET
+// Elapsed time: 187 seconds
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // D
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi ti"); // OverlayTextField
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Timer", 4, "AXI Timer", 0, false); // L
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Timer", 4); // L
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Timer", 4, "AXI Timer", 0, false, false, false, false, false, true); // L - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+dismissDialog("Re-customize IP"); // r
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // g
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Run Connection Automation"); // O
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_timer_0/S_AXI] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x41C0_0000 [ 64K ]>. Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x41C0_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_dma_0/Data_MM2S. Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x41C0_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_dma_0/Data_S2MM. Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/axi_dma_0/Data_SG' at <0x41C0_0000 [ 64K ]>. 
+// Tcl Message: Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_dma_0/Data_SG. 
+dismissDialog("Run Connection Automation"); // bA
+// Elapsed time: 19 seconds
+selectButton(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "System_validate_bd_design_rsb"); // D
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// Tcl Command: 'validate_bd_design'
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: validate_bd_design 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+// Tcl Message: ERROR: [IP_Flow 19-3458] Validation failed for parameter 'Write Depth A(Write_Depth_A)' for BD Cell 'doHist_0_bram_0'. Value '1' is out of the range (2,1048576) 
+// Tcl Message: INFO: [IP_Flow 19-3438] Customization errors found on 'doHist_0_bram_0'. Restoring to previous valid configuration. 
+// Tcl Message: ERROR: [Common 17-39] 'set_property' failed due to earlier errors. 
+// Tcl Message: ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.     ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 69 
+// Tcl Message: ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors. 
+dismissDialog("Validate Design"); // bA
+// HMemoryUtils.trashcanNow. Engine heap size: 2,612 MB. GUI used memory: 125 MB. Current time: 3/7/22, 3:16:40 PM CET
+selectList(PAResourceAtoD.CmdMsgDialog_MESSAGES, "[IP_Flow 19-3458] Validation failed for parameter 'Write Depth A(Write_Depth_A)' for BD Cell 'doHist_0_bram_0'. Value '1' is out of the range (2,1048576)", 0); // b
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // eh
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1028, 329, 1125, 552, false, false, false, true, false); // hx - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ao
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets doHist_0_histo_PORTB] [get_bd_cells doHist_0_bram_0] 
+// [Engine Memory]: 2,629 MB (+12795kb) [00:41:58]
+selectButton(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "System_validate_bd_design_rsb"); // D
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// Tcl Command: 'validate_bd_design'
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: validate_bd_design 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+dismissDialog("Validate Design"); // bA
+selectButton("OptionPane.button", "OK"); // JButton
+// HMemoryUtils.trashcanNow. Engine heap size: 2,646 MB. GUI used memory: 124 MB. Current time: 3/7/22, 3:17:00 PM CET
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1 (design_1.bd)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1 (design_1.bd)]", 1, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ao
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Create HDL Wrapper"); // a
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: make_wrapper -files [get_files /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.srcs/sources_1/bd/design_1/design_1.bd] -top 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : </home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/synth/design_1.v 
+// Tcl Message: VHDL Output written to : /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/sim/design_1.v VHDL Output written to : /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,679 MB. GUI used memory: 126 MB. Current time: 3/7/22, 3:17:15 PM CET
+// Create Top HDL Elapsed Time: 7.4s
+dismissDialog("Create HDL Wrapper"); // bA
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 48 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// 'cR' command handler elapsed time: 3 seconds
+dismissDialog("No Implementation Results Available"); // A

@@ -52,3 +52,7 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 29, loop 'VITIS_LOOP_18_1'
 INFO: [SCHED 204-11] Finished scheduling.
 INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 418.387 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
