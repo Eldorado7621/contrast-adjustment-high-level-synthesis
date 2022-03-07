@@ -1,40 +1,122 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'sam' on host 'sam-HP-Pavilion-Laptop-15-eg0xxx' (Linux_x86_64 version 5.4.0-100-generic) on Mon Mar 07 13:58:39 CET 2022
+INFO: [HLS 200-10] For user 'sam' on host 'sam-HP-Pavilion-Laptop-15-eg0xxx' (Linux_x86_64 version 5.4.0-100-generic) on Mon Mar 07 14:25:20 CET 2022
 INFO: [HLS 200-10] On os Ubuntu 18.04.6 LTS
 INFO: [HLS 200-10] In directory '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis'
-Sourcing Tcl script '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist/solution1/export.tcl'
-INFO: [HLS 200-1510] Running: open_project doHist 
-INFO: [HLS 200-10] Opening project '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist'.
-INFO: [HLS 200-1510] Running: set_top doHist 
-INFO: [HLS 200-1510] Running: add_files core.cpp 
-INFO: [HLS 200-10] Adding design file 'core.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files core.h 
-INFO: [HLS 200-10] Adding design file 'core.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb test_core.cpp 
-INFO: [HLS 200-10] Adding test bench file 'test_core.cpp' to the project
+Sourcing Tcl script '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project doContrastIP 
+INFO: [HLS 200-10] Opening project '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP'.
+INFO: [HLS 200-1510] Running: set_top doContrast 
+INFO: [HLS 200-1510] Running: add_files doContrastIP/core.cpp 
+INFO: [HLS 200-10] Adding design file 'doContrastIP/core.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files doContrastIP/core.h 
+INFO: [HLS 200-10] Adding design file 'doContrastIP/core.h' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
-INFO: [HLS 200-10] Opening solution '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist/solution1'.
+INFO: [HLS 200-10] Opening solution '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1510] Running: set_part xc7z010clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2021.2 (64-bit)
-  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
-  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  7 13:58:52 2022...
-INFO: [HLS 200-802] Generated output file doHist/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 12.92 seconds. CPU system time: 0.83 seconds. Elapsed time: 15.26 seconds; current allocated memory: -929.574 MB.
-INFO: [HLS 200-112] Total CPU user time: 14.66 seconds. Total CPU system time: 1.13 seconds. Total elapsed time: 16.51 seconds; peak allocated memory: 292.742 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.194 GB.
+INFO: [HLS 200-10] Analyzing design file 'doContrastIP/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.21 seconds. CPU system time: 0.25 seconds. Elapsed time: 2.63 seconds; current allocated memory: 285.445 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'unsigned char generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned char>::is_signed), bool>::type)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'unsigned char generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned char>::is_signed), bool>::type)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'unsigned char generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned char>::is_signed), bool>::type)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'unsigned char generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>(float, bool, hls::enable_if<!(std::numeric_limits<unsigned char>::is_signed), bool>::type)' into 'unsigned char generic_cast_IEEE754<unsigned char, float>(float, bool)' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'unsigned char generic_cast_IEEE754<unsigned char, float>(float, bool)' into '__hls_fptoui_float_i8' (/wrk/ci/prod/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:63:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptoui_float_i8' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (doContrastIP/core.cpp:6:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<8>s.i8' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i6.s_struct.ap_uint<6>s' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i5.s_struct.ap_uint<5>s' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i2.s_struct.ap_uint<2>s' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint<8>s' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<6>s.i6' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<5>s.i5' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<2>s.i2' into 'doContrast(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, unsigned char, unsigned char)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.92 seconds. CPU system time: 0.18 seconds. Elapsed time: 3.1 seconds; current allocated memory: 285.746 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 285.746 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 311.484 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 348.570 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 402.750 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 417.426 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'doContrast' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'doContrast_Pipeline_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 29, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 418.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 418.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'doContrast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 418.641 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 418.641 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'doContrast_Pipeline_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'doContrast_Pipeline_VITIS_LOOP_18_1' pipeline 'VITIS_LOOP_18_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'doContrast_Pipeline_VITIS_LOOP_18_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 419.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'doContrast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/inStream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/inStream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/inStream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/inStream_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/inStream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/inStream_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/inStream_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/outStream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/outStream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/outStream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/outStream_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/outStream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/outStream_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/outStream_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/xMin' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'doContrast/xMax' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'doContrast' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'xMin', 'xMax', 'return' and 'ap_local_deadlock' to AXI-Lite port ctrl_bus.
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'doContrast'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 421.254 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 426.547 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 431.926 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for doContrast.
+INFO: [VLOG 209-307] Generating Verilog RTL for doContrast.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 155.93 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 7.83 seconds. CPU system time: 0.52 seconds. Elapsed time: 7.5 seconds; current allocated memory: -790.469 MB.
+INFO: [HLS 200-112] Total CPU user time: 9.96 seconds. Total CPU system time: 0.86 seconds. Total elapsed time: 9.02 seconds; peak allocated memory: 1.194 GB.

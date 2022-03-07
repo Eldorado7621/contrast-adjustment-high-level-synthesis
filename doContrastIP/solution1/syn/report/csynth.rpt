@@ -1,0 +1,138 @@
+
+
+================================================================
+== Synthesis Summary Report of 'doContrast'
+================================================================
++ General Information: 
+    * Date:           Mon Mar  7 14:25:29 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        doContrastIP
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+--------+----------+-----------+-----+
+    |                 Modules                | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |      |        |          |           |     |
+    |                 & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined| BRAM |   DSP  |    FF    |    LUT    | URAM|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+--------+----------+-----------+-----+
+    |+ doContrast                            |     -|  0.89|    76838|  7.684e+05|         -|    76839|      -|        no|     -|  3 (3%)|  885 (2%)|  1177 (6%)|    -|
+    | + doContrast_Pipeline_VITIS_LOOP_18_1  |     -|  0.89|    76829|  7.683e+05|         -|    76829|      -|        no|     -|  3 (3%)|  754 (2%)|   996 (5%)|    -|
+    |  o VITIS_LOOP_18_1                     |     -|  7.30|    76827|  7.683e+05|        29|        1|  76800|       yes|     -|       -|         -|          -|    -|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+--------+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++----------------+------------+---------------+--------+----------+
+| Interface      | Data Width | Address Width | Offset | Register |
++----------------+------------+---------------+--------+----------+
+| s_axi_ctrl_bus | 32         | 5             | 16     | 0        |
++----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| Interface      | Register | Offset | Width | Access | Description                      | Bit Fields                                               |
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| s_axi_ctrl_bus | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART |
+| s_axi_ctrl_bus | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                 |
+| s_axi_ctrl_bus | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN 5=CHAN2_INT_EN             |
+| s_axi_ctrl_bus | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST 5=CHAN2_INT_ST             |
+| s_axi_ctrl_bus | xMin     | 0x10   | 32    | W      | Data signal of xMin              |                                                          |
+| s_axi_ctrl_bus | xMax     | 0x18   | 32    | W      | Data signal of xMax              |                                                          |
++----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+
+* AXIS
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| inStream  | both          | 8     | 6     | 5   | 1     | 1     | 1      | 1     | 2     | 1      |
+| outStream | both          | 8     | 6     | 5   | 1     | 1     | 1      | 1     | 2     | 1      |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+--------------------------------------------+
+| Argument  | Direction | Datatype                                   |
++-----------+-----------+--------------------------------------------+
+| inStream  | in        | stream<hls::axis<ap_uint<8>, 2, 5, 6>, 0>& |
+| outStream | out       | stream<hls::axis<ap_uint<8>, 2, 5, 6>, 0>& |
+| xMin      | in        | unsigned char                              |
+| xMax      | in        | unsigned char                              |
++-----------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++-----------+----------------+-----------+--------------------------------+
+| Argument  | HW Interface   | HW Type   | HW Info                        |
++-----------+----------------+-----------+--------------------------------+
+| inStream  | inStream       | interface |                                |
+| outStream | outStream      | interface |                                |
+| xMin      | s_axi_ctrl_bus | register  | name=xMin offset=0x10 range=32 |
+| xMax      | s_axi_ctrl_bus | register  | name=xMax offset=0x18 range=32 |
++-----------+----------------+-----------+--------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+-----+--------+------------+------+--------+---------+
+| Name                                   | DSP | Pragma | Variable   | Op   | Impl   | Latency |
++----------------------------------------+-----+--------+------------+------+--------+---------+
+| + doContrast                           | 3   |        |            |      |        |         |
+|   sitofp_32s_32_6_no_dsp_1_U22         | -   |        | sub_ln16   | sub  | fabric | 0       |
+|  + doContrast_Pipeline_VITIS_LOOP_18_1 | 3   |        |            |      |        |         |
+|    idxPixel_2_fu_189_p2                | -   |        | idxPixel_2 | add  | fabric | 0       |
+|    sub_ln29_fu_227_p2                  | -   |        | sub_ln29   | sub  | fabric | 0       |
+|    fdiv_32ns_32ns_32_16_no_dsp_1_U2    | -   |        | div        | fdiv | fabric | 15      |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U1    | 3   |        | y_t_float  | fmul | maxdsp | 3       |
+|    add_ln344_fu_263_p2                 | -   |        | add_ln344  | add  | fabric | 0       |
+|    sub_ln1364_fu_277_p2                | -   |        | sub_ln1364 | sub  | fabric | 0       |
++----------------------------------------+-----+--------+------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------+---------------------------------------------------+
+| Type      | Options                               | Location                                          |
++-----------+---------------------------------------+---------------------------------------------------+
+| interface | axis port=inStream                    | doContrastIP/core.cpp:9 in docontrast, inStream   |
+| interface | axis port=outStream                   | doContrastIP/core.cpp:10 in docontrast, outStream |
+| interface | s_axilite port=return bundle=ctrl_bus | doContrastIP/core.cpp:11 in docontrast, return    |
+| interface | s_axilite port=xMin bundle=ctrl_bus   | doContrastIP/core.cpp:12 in docontrast, xMin      |
+| interface | s_axilite port=xMax bundle=ctrl_bus   | doContrastIP/core.cpp:13 in docontrast, xMax      |
+| pipeline  |                                       | doContrastIP/core.cpp:20 in docontrast            |
++-----------+---------------------------------------+---------------------------------------------------+
+
+

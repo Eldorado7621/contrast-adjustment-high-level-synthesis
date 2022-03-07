@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vitis HLS Report for 'doContrast'
+================================================================
+* Date:           Mon Mar  7 14:25:29 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        doContrastIP
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.413 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    76838|    76838|  0.768 ms|  0.768 ms|  76839|  76839|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------+-------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |                                               |                                     |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+        |                    Instance                   |                Module               |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+        +-----------------------------------------------+-------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78  |doContrast_Pipeline_VITIS_LOOP_18_1  |    76829|    76829|  0.768 ms|  0.768 ms|  76829|  76829|       no|
+        +-----------------------------------------------+-------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP|   FF  |  LUT  | URAM|
++-----------------+---------+----+-------+-------+-----+
+|DSP              |        -|   -|      -|      -|    -|
+|Expression       |        -|   -|      0|     16|    -|
+|FIFO             |        -|   -|      -|      -|    -|
+|Instance         |        0|   3|    825|   1070|    -|
+|Memory           |        -|   -|      -|      -|    -|
+|Multiplexer      |        -|   -|      -|     91|    -|
+|Register         |        -|   -|     60|      -|    -|
++-----------------+---------+----+-------+-------+-----+
+|Total            |        0|   3|    885|   1177|    0|
++-----------------+---------+----+-------+-------+-----+
+|Available        |      120|  80|  35200|  17600|    0|
++-----------------+---------+----+-------+-------+-----+
+|Utilization (%)  |        0|   3|      2|      6|    0|
++-----------------+---------+----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+    |                    Instance                   |                Module               | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+    |ctrl_bus_s_axi_U                               |ctrl_bus_s_axi                       |        0|   0|   71|   74|    0|
+    |grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78  |doContrast_Pipeline_VITIS_LOOP_18_1  |        0|   3|  754|  996|    0|
+    |sitofp_32s_32_6_no_dsp_1_U22                   |sitofp_32s_32_6_no_dsp_1             |        0|   0|    0|    0|    0|
+    +-----------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+    |Total                                          |                                     |        0|   3|  825| 1070|    0|
+    +-----------------------------------------------+-------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                          Variable Name                         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |sub_ln16_fu_123_p2                                              |         -|   0|  0|  14|           9|           9|
+    |grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78_outStream_TREADY  |       and|   0|  0|   2|           1|           1|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                           |          |   0|  0|  16|          10|          10|
+    +----------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                     |  59|         11|    1|         11|
+    |grp_fu_112_ce                 |   9|          2|    1|          2|
+    |grp_fu_112_p0                 |  14|          3|   32|         96|
+    |inStream_TREADY_int_regslice  |   9|          2|    1|          2|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         |  91|         18|   35|        111|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |                            Name                            | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                   |  10|   0|   10|          0|
+    |grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78_ap_start_reg  |   1|   0|    1|          0|
+    |histRange_reg_148                                           |  32|   0|   32|          0|
+    |sub_ln16_reg_138                                            |   9|   0|    9|          0|
+    |xMin_read_reg_133                                           |   8|   0|    8|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                       |  60|   0|   60|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++------------------------+-----+-----+------------+--------------------+--------------+
+|s_axi_ctrl_bus_AWVALID  |   in|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_AWREADY  |  out|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_AWADDR   |   in|    5|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_WVALID   |   in|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_WREADY   |  out|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_WDATA    |   in|   32|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_WSTRB    |   in|    4|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_ARVALID  |   in|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_ARREADY  |  out|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_ARADDR   |   in|    5|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_RVALID   |  out|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_RREADY   |   in|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_RDATA    |  out|   32|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_RRESP    |  out|    2|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_BVALID   |  out|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_BREADY   |   in|    1|       s_axi|            ctrl_bus|        scalar|
+|s_axi_ctrl_bus_BRESP    |  out|    2|       s_axi|            ctrl_bus|        scalar|
+|ap_local_block          |  out|    1|  ap_ctrl_hs|          doContrast|  return value|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|          doContrast|  return value|
+|ap_rst_n                |   in|    1|  ap_ctrl_hs|          doContrast|  return value|
+|interrupt               |  out|    1|  ap_ctrl_hs|          doContrast|  return value|
+|inStream_TDATA          |   in|    8|        axis|   inStream_V_data_V|       pointer|
+|inStream_TVALID         |   in|    1|        axis|   inStream_V_dest_V|       pointer|
+|inStream_TREADY         |  out|    1|        axis|   inStream_V_dest_V|       pointer|
+|inStream_TDEST          |   in|    6|        axis|   inStream_V_dest_V|       pointer|
+|inStream_TKEEP          |   in|    1|        axis|   inStream_V_keep_V|       pointer|
+|inStream_TSTRB          |   in|    1|        axis|   inStream_V_strb_V|       pointer|
+|inStream_TUSER          |   in|    2|        axis|   inStream_V_user_V|       pointer|
+|inStream_TLAST          |   in|    1|        axis|   inStream_V_last_V|       pointer|
+|inStream_TID            |   in|    5|        axis|     inStream_V_id_V|       pointer|
+|outStream_TDATA         |  out|    8|        axis|  outStream_V_data_V|       pointer|
+|outStream_TVALID        |  out|    1|        axis|  outStream_V_dest_V|       pointer|
+|outStream_TREADY        |   in|    1|        axis|  outStream_V_dest_V|       pointer|
+|outStream_TDEST         |  out|    6|        axis|  outStream_V_dest_V|       pointer|
+|outStream_TKEEP         |  out|    1|        axis|  outStream_V_keep_V|       pointer|
+|outStream_TSTRB         |  out|    1|        axis|  outStream_V_strb_V|       pointer|
+|outStream_TUSER         |  out|    2|        axis|  outStream_V_user_V|       pointer|
+|outStream_TLAST         |  out|    1|        axis|  outStream_V_last_V|       pointer|
+|outStream_TID           |  out|    5|        axis|    outStream_V_id_V|       pointer|
++------------------------+-----+-----+------------+--------------------+--------------+
+
