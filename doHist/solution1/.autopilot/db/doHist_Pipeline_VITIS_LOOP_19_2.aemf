@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1646657905333">
+  <ports id="1" name="inStream_V_data_V" type="PortType" originalName="this" coreId="997420912" bitwidth="8">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="inStream_V_keep_V" type="PortType" originalName="this" coreId="997420912" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="inStream_V_strb_V" type="PortType" originalName="this" coreId="0" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="inStream_V_user_V" type="PortType" originalName="this" coreId="0" bitwidth="2">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="inStream_V_last_V" type="PortType" originalName="this" coreId="30" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="inStream_V_id_V" type="PortType" originalName="this" coreId="64" bitwidth="5">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="inStream_V_dest_V" type="PortType" originalName="this" coreId="542329928" bitwidth="6">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="histo" type="PortType" coreName="RAM" coreId="3311713488" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="256">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="54" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="57" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="58" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="60" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="66" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="67" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="68" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="71" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="72" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="73" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="74" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="75" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="76" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="77" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="80" source_obj="//@ports.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="84" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="97" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="99" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="101" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="102" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="167" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="168" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="170" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="171" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="172" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="173" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="174" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="175" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="176" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="177" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="178" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="179" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="180" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="2147483647" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6" is_back_edge="1"/>
+  <edges id="-80" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@ports.7"/>
+  <blocks id="18" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="reuse_addr_reg" coreId="2196105405" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="reuse_reg" coreId="3311717632" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="idxPixel" originalName="idxPixel" coreId="3311717952" bitwidth="17" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="idxPixel_write_ln0" coreId="6775156" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="reuse_reg_write_ln0" coreId="3311604096" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="reuse_addr_reg_write_ln0" coreId="1869635878" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="br_ln0" coreId="3311605120" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="44" name=".exitStub" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="_ln0" coreId="3311612008" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" iiViolation="Memory Dependency;mFailedII=1;mDependenceDistancedII=2;mLimitedResource=0;nodes=37__,33__;" id="157" pipe_depth="4" RegionName="VITIS_LOOP_19_2">
+    <basic_blocks id="25" name=".preheader" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.exitStub</controlOutputObjs>
+      <controlOutputObjs>.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="idxPixel_1" lineNumber="19" originalName="idxPixel" fileName="core.cpp" fileDirectory=".." coreId="30" contextFuncName="doHist" bitwidth="17" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="19" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="icmp_ln19" lineNumber="19" fileName="core.cpp" fileDirectory=".." rtlName="icmp_ln19_fu_121_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="doHist" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.43" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="19" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="idxPixel_2" lineNumber="19" originalName="idxPixel" fileName="core.cpp" fileDirectory=".." rtlName="idxPixel_2_fu_127_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="doHist" bitwidth="17" opcode="add" m_display="0" m_delay="2.1" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="19" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln19" lineNumber="19" fileName="core.cpp" fileDirectory=".." coreId="3311470032" contextFuncName="doHist" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="19" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="core.cpp">
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="42" name=".split" type="BlockType">
+      <controlInputObjs>.preheader</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="empty_11" lineNumber="293" fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="read" bitwidth="24" opcode="read" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="read"/>
+        <dataInputObjs>inStream_V_data_V</dataInputObjs>
+        <dataInputObjs>inStream_V_keep_V</dataInputObjs>
+        <dataInputObjs>inStream_V_strb_V</dataInputObjs>
+        <dataInputObjs>inStream_V_user_V</dataInputObjs>
+        <dataInputObjs>inStream_V_last_V</dataInputObjs>
+        <dataInputObjs>inStream_V_id_V</dataInputObjs>
+        <dataInputObjs>inStream_V_dest_V</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="tmp_data_V" lineNumber="293" originalName="tmp.data.V" fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" fileDirectory=".." coreId="3311469136" contextFuncName="read" bitwidth="8" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h" linenumber="293" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="read"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="zext_ln587" lineNumber="587" fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="zext_ln587_fu_142_p1" coreId="0" contextFuncName="operator_unsigned_long_long" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="587" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="operator unsigned long long"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="histo_addr" lineNumber="26" fileName="core.cpp" fileDirectory=".." coreId="3311471152" contextFuncName="doHist" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="26" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>histo</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>histo</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="reuse_reg_load" coreId="3311471392" bitwidth="32" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="reuse_addr_reg_load" coreId="0" bitwidth="64" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="histo_load" lineNumber="26" fileName="core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="doHist" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="1" m_delay="3.25" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="26" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>store</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="addr_cmp" lineNumber="587" fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="addr_cmp_fu_150_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_unsigned_long_long" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="2.77" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="587" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="operator unsigned long long"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="reuse_select" lineNumber="587" fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="reuse_select_fu_164_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_unsigned_long_long" bitwidth="32" opcode="select" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="587" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="operator unsigned long long"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="add_ln26" lineNumber="26" fileName="core.cpp" fileDirectory=".." rtlName="add_ln26_fu_171_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="doHist" bitwidth="32" opcode="add" nodeLabel="2.0" m_display="0" m_delay="2.55" m_topoIndex="24" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="core.cpp" linenumber="26" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="histo_addr_write_ln26" lineNumber="26" fileName="core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="doHist" opcode="store" nodeLabel="3.0" m_display="1" m_delay="3.25" m_isLCDNode="true" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="26" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="reuse_reg_write_ln26" lineNumber="26" fileName="core.cpp" fileDirectory=".." coreId="3311467840" contextFuncName="doHist" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.58" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="26" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="reuse_addr_reg_write_ln587" lineNumber="587" fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="1031040613" contextFuncName="operator_unsigned_long_long" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h" linenumber="587" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="operator unsigned long long"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="idxPixel_write_ln19" lineNumber="19" fileName="core.cpp" fileDirectory=".." coreId="542462019" contextFuncName="doHist" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="19" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="br_ln0" coreId="3311610976" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <controlInputObjs>.preheader</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="core.cpp">
+        <validLinenumbers>26</validLinenumbers>
+        <validLinenumbers>19</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>587</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h">
+        <validLinenumbers>293</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="reuse_addr_reg_reg_181">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="addr_cmp_reg_212">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln26_reg_217">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="histo_addr_reg_206">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln19_reg_202">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="reuse_reg_reg_188">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="idxPixel_reg_195">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <expressionNodes realName="reuse_select_fu_164">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln587_fu_142">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="addr_cmp_fu_150">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_data_V_fu_138">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln26_fu_171">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="reuse_addr_reg_fu_56">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="reuse_reg_fu_60">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="idxPixel_fu_64">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="histo_addr_gep_fu_86">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="idxPixel_2_fu_127">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln19_fu_121">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln26_store_fu_177">
+    <nodeIds>38</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln587_store_fu_156">
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="reuse_reg_load_load_fu_161">
+    <nodeIds>31</nodeIds>
+  </ioNodes>
+  <ioNodes realName="idxPixel_1_load_fu_118">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="reuse_addr_reg_load_load_fu_147">
+    <nodeIds>32</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_108">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_103">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="empty_11_read_fu_68">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_113">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln19_store_fu_133">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="histo">
+    <nodeIds>37</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="histo" portID="1">
+    <nodeIds>33</nodeIds>
+  </memoryPorts>
+  <ioPorts name="histo(p0)">
+    <contents name="store">
+      <nodeIds>37</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="histo(p1)">
+    <contents name="load">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStream_V_data_V">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStream_V_dest_V">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStream_V_id_V">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStream_V_keep_V">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStream_V_last_V">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStream_V_strb_V">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="inStream_V_user_V">
+    <contents name="read">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="2" latency="2"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="2"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="doHist_Pipeline_VITIS_LOOP_19_2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="153603" mMaxLatency="153603">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>18</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_19_2" mII="2" mDepth="4" mMinTripCount="76800" mMaxTripCount="76800" mMinLatency="153601" mMaxLatency="153601" mType="1">
+      <basicBlocks>25</basicBlocks>
+      <basicBlocks>42</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>44</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

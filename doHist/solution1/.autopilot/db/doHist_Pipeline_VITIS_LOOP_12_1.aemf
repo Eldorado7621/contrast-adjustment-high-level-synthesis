@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1646657905237">
+  <ports id="1" name="histo" type="PortType" coreName="RAM" coreId="997420912" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="256">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="27" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="28" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="29" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="30" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="33" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="36" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="37" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="38" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="39" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="40" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@ports.0"/>
+  <edges id="43" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="46" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="47" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="48" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="49" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="88" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="89" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="90" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="91" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="92" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="93" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="94" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <blocks id="6" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>block_12</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="idxHist" originalName="idxHist" coreId="1852402733" bitwidth="9" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="idxHist_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="br_ln0" coreId="4294967292" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_12</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="22" name=".preheader.preheader.exitStub" type="BlockType">
+    <controlInputObjs>block_12</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln0" coreId="3311192640" opcode="ret" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="77" pipe_depth="1" RegionName="VITIS_LOOP_12_1">
+    <basic_blocks id="12" name="block_12" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>.split2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader.preheader.exitStub</controlOutputObjs>
+      <controlOutputObjs>.split2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="idxHist_1" lineNumber="12" originalName="idxHist" fileName="core.cpp" fileDirectory=".." coreId="1667592275" contextFuncName="doHist" bitwidth="9" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="12" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="icmp_ln12" lineNumber="12" fileName="core.cpp" fileDirectory=".." rtlName="icmp_ln12_fu_58_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="doHist" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.66" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="12" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="add_ln12" lineNumber="12" fileName="core.cpp" fileDirectory=".." rtlName="add_ln12_fu_64_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="doHist" bitwidth="9" opcode="add" m_display="0" m_delay="1.82" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="12" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="br_ln12" lineNumber="12" fileName="core.cpp" fileDirectory=".." coreId="1814062958" contextFuncName="doHist" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="12" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split2</controlInputObjs>
+        <controlInputObjs>.preheader.preheader.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="core.cpp">
+        <validLinenumbers>12</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="20" name=".split2" type="BlockType">
+      <controlInputObjs>block_12</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_12</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="zext_ln12" lineNumber="12" fileName="core.cpp" fileDirectory=".." rtlName="zext_ln12_fu_70_p1" coreId="0" contextFuncName="doHist" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="12" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="histo_addr" lineNumber="15" fileName="core.cpp" fileDirectory=".." coreId="997420800" contextFuncName="doHist" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="15" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>histo</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="histo_addr_write_ln15" lineNumber="15" fileName="core.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="doHist" opcode="store" m_display="0" m_delay="3.25" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="15" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="idxHist_write_ln12" lineNumber="12" fileName="core.cpp" fileDirectory=".." coreId="3311151296" contextFuncName="doHist" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="core.cpp" linenumber="12" fileDirectory="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis" functionName="doHist"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln0" coreId="1819113532" opcode="br" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_12</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="core.cpp">
+        <validLinenumbers>12</validLinenumbers>
+        <validLinenumbers>15</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <regnodes realName="idxHist_reg_80">
+    <nodeIds>2</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln12_fu_58">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="histo_addr_gep_fu_36">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="idxHist_fu_32">
+    <nodeIds>2</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln12_fu_70">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln12_fu_64">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln0_store_fu_50">
+    <nodeIds>4</nodeIds>
+  </ioNodes>
+  <ioNodes realName="idxHist_1_load_fu_55">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln12_store_fu_75">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="histo">
+    <nodeIds>17</nodeIds>
+  </memoryPorts>
+  <ioPorts name="histo(p0)">
+    <contents name="store">
+      <nodeIds>17</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="2" stage="1" latency="1"/>
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="doHist_Pipeline_VITIS_LOOP_12_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="258" mMaxLatency="258">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>6</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_12_1" mII="1" mDepth="1" mMinTripCount="256" mMaxTripCount="256" mMinLatency="256" mMaxLatency="256" mType="1">
+      <basicBlocks>12</basicBlocks>
+      <basicBlocks>20</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>22</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

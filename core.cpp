@@ -3,13 +3,13 @@
 
 void doHist(hls::stream<uint_8_side_channel> &inStream, int histo[256])
 {
-#pragma HLS INTERFACE axis port=outStream
+
 #pragma HLS INTERFACE axis port=inStream
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl_bus
 #pragma HLS INTERFACE bram port=histo
 
 	//initialize to zero before calculating the histogram
-	for(int idyHist=0; idxHist<256; idxHist++)
+	for(int idxHist=0; idxHist<256; idxHist++)
 	{
 #pragma HLS PIPELINE
 		histo[idxHist]=0;

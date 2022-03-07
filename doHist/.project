@@ -52,6 +52,11 @@
 			<location>/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/core.h</location>
 		</link>
 		<link>
+			<name>testbench/test_core.cpp</name>
+			<type>1</type>
+			<location>/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/test_core.cpp</location>
+		</link>
+		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist/solution1/solution1.directive</location>

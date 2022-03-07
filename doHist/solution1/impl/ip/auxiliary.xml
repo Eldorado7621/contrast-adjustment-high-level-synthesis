@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="doHist" xd:componentRef="doHist" xd:initiationInterval="153865" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_ctrl_bus" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="inStream" xd:originalName="inStream" xd:direction="in" xd:interfaceRef="inStream" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="*(histo_PORTA)" xd:originalName="histo" xd:direction="inout" xd:interfaceRef="histo_PORTA" xd:busTypeRef="bram" xd:dataWidth="32" xd:bufferDirection="inout"/>
+  <xd:arg xd:name="*(histo_PORTB)" xd:originalName="histo" xd:direction="inout" xd:interfaceRef="histo_PORTB" xd:busTypeRef="bram" xd:dataWidth="32" xd:bufferDirection="inout"/>
+  <xd:latencyEstimates xd:best-case="153864" xd:worst-case="153864" xd:average-case="153864"/>
+  <xd:resourceEstimates xd:LUT="440" xd:FF="220" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

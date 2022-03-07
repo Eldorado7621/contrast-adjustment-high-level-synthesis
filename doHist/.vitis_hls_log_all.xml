@@ -1,2 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog"/>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'doHist/histo_Din_B' to 0." projectName="doHist" solutionName="solution1" date="2022-03-07T13:58:25.361+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'doHist/histo_WEN_B' to 0." projectName="doHist" solutionName="solution1" date="2022-03-07T13:58:25.350+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="doHist" solutionName="solution1" date="2022-03-07T13:58:25.342+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'doHist_Pipeline_VITIS_LOOP_19_2/histo_Din_B' to 0." projectName="doHist" solutionName="solution1" date="2022-03-07T13:58:25.259+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'doHist_Pipeline_VITIS_LOOP_19_2/histo_WEN_B' to 0." projectName="doHist" solutionName="solution1" date="2022-03-07T13:58:25.249+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'doHist_Pipeline_VITIS_LOOP_19_2' (loop 'VITIS_LOOP_19_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 2, offset = 1) between 'store' operation ('histo_addr_write_ln26', core.cpp:26) of variable 'add_ln26', core.cpp:26 on array 'histo' and 'load' operation ('histo_load', core.cpp:26) on array 'histo'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html" projectName="doHist" solutionName="solution1" date="2022-03-07T13:58:25.134+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

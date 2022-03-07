@@ -1,0 +1,93 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z010clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0 seconds; current allocated memory: 1.194 GB.
+INFO: [HLS 200-10] Analyzing design file 'core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.22 seconds. CPU system time: 0.23 seconds. Elapsed time: 2.69 seconds; current allocated memory: 285.215 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<8>s.i8' into 'doHist(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, int*)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<6>s.i6' into 'doHist(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, int*)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<5>s.i5' into 'doHist(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, int*)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'doHist(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, int*)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<2>s.i2' into 'doHist(hls::stream<hls::axis<ap_uint<8>, 2ul, 5ul, 6ul>, 0>&, int*)' (/tools/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.21 seconds. CPU system time: 0.24 seconds. Elapsed time: 2.59 seconds; current allocated memory: 285.215 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 285.215 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 291.113 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 300.047 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_19_2' (core.cpp:22) in function 'doHist' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 330.258 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'histo' (core.cpp:15:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'histo' (core.cpp:26:38)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 347.918 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'doHist' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'doHist_Pipeline_VITIS_LOOP_12_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_12_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_12_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 347.918 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 347.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'doHist_Pipeline_VITIS_LOOP_19_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_2'.
+WARNING: [HLS 200-880] The II Violation in module 'doHist_Pipeline_VITIS_LOOP_19_2' (loop 'VITIS_LOOP_19_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 2, offset = 1) between 'store' operation ('histo_addr_write_ln26', core.cpp:26) of variable 'add_ln26', core.cpp:26 on array 'histo' and 'load' operation ('histo_load', core.cpp:26) on array 'histo'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_19_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 347.918 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 347.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'doHist' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 347.918 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 347.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'doHist_Pipeline_VITIS_LOOP_12_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'doHist_Pipeline_VITIS_LOOP_12_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 347.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'doHist_Pipeline_VITIS_LOOP_19_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'doHist_Pipeline_VITIS_LOOP_19_2' pipeline 'VITIS_LOOP_19_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'doHist_Pipeline_VITIS_LOOP_19_2/histo_WEN_B' to 0.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
