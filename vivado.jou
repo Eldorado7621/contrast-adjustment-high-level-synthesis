@@ -2,80 +2,15 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Mar  7 14:34:45 2022
-# Process ID: 17638
+# Start of session at: Mon Mar  7 15:54:51 2022
+# Process ID: 7789
 # Current directory: /home/sam/git_workspace/contrast-adjustment-high-level-synthesis
 # Command line: vivado
 # Log file: /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/vivado.log
 # Journal file: /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/vivado.jou
-# Running On: sam-HP-Pavilion-Laptop-15-eg0xxx, OS: Linux, CPU Frequency: 798.053 MHz, CPU Physical cores: 4, Host memory: 16540 MB
+# Running On: sam-HP-Pavilion-Laptop-15-eg0xxx, OS: Linux, CPU Frequency: 1303.708 MHz, CPU Physical cores: 4, Host memory: 16540 MB
 #-----------------------------------------------------------
 start_gui
-create_project contrast_adjustment_vivado /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado -part xc7z010clg400-1
-set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
-create_bd_design "design_1"
+open_project /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.xpr
 update_compile_order -fileset sources_1
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
-endgroup
-set_property  ip_repo_paths  /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist [current_project]
-update_ip_catalog
-set_property  ip_repo_paths  {/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP} [current_project]
-update_ip_catalog
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:hls:doHist:1.0 doHist_0
-endgroup
-set_property  ip_repo_paths  /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist [current_project]
-update_ip_catalog
-set_property  ip_repo_paths  {/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP} [current_project]
-update_ip_catalog
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:hls:doContrast:1.0 doContrast_0
-endgroup
-regenerate_bd_layout
-set_property -dict [list CONFIG.c_sg_length_width {23} CONFIG.c_m_axis_mm2s_tdata_width {8} CONFIG.c_include_mm2s_dre {1} CONFIG.c_include_s2mm_dre {1}] [get_bd_cells axi_dma_0]
-set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]
-apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_0
-endgroup
-regenerate_bd_layout
-connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins axis_broadcaster_0/S_AXIS]
-connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_0/M00_AXIS] [get_bd_intf_pins doContrast_0/inStream]
-connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_0/M01_AXIS] [get_bd_intf_pins doHist_0/inStream]
-connect_bd_intf_net [get_bd_intf_pins doContrast_0/outStream] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins doHist_0/histo_PORTA]
-apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins doHist_0/histo_PORTB]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/doHist_0/s_axi_ctrl_bus} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins doHist_0/s_axi_ctrl_bus]
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/doContrast_0/s_axi_ctrl_bus} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins doContrast_0/s_axi_ctrl_bus]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axis_broadcaster_0/aclk]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
-regenerate_bd_layout
-delete_bd_objs [get_bd_intf_nets doHist_0_histo_PORTB]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
-endgroup
-set_property location {6 2288 244} [get_bd_cells axi_bram_ctrl_0]
-set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]
-connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins doHist_0_bram/BRAM_PORTB]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_MM2S} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_MM2S]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM]
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/axi_dma_0/M_AXI_SG} Slave {/axi_bram_ctrl_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_SG]
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:bram_cntlr -config {BRAM "Auto" }  [get_bd_intf_pins doHist_0/histo_PORTB]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_0/S_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_timer_0/S_AXI]
-validate_bd_design
-delete_bd_objs [get_bd_intf_nets doHist_0_histo_PORTB] [get_bd_cells doHist_0_bram_0]
-validate_bd_design
-make_wrapper -files [get_files /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+write_hw_platform -fixed -include_bit -force -file /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/design_1_wrapper.xsa

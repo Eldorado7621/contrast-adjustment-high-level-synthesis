@@ -1,0 +1,405 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon Mar  7 15:19:41 2022
+# Process ID: 26325
+# Current directory: /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doContrast_0_0_synth_1
+# Command line: vivado -log design_1_doContrast_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_doContrast_0_0.tcl
+# Log file: /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doContrast_0_0_synth_1/design_1_doContrast_0_0.vds
+# Journal file: /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doContrast_0_0_synth_1/vivado.jou
+# Running On: sam-HP-Pavilion-Laptop-15-eg0xxx, OS: Linux, CPU Frequency: 3769.653 MHz, CPU Physical cores: 4, Host memory: 16540 MB
+#-----------------------------------------------------------
+source design_1_doContrast_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2778.848 ; gain = 2.016 ; free physical = 2470 ; free virtual = 6564
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top design_1_doContrast_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26528
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2778.980 ; gain = 0.000 ; free physical = 170 ; free virtual = 1562
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_doContrast_0_0' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ip/design_1_doContrast_0_0/synth/design_1_doContrast_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'doContrast' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast.v:12]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_doContrast_Pipeline_VITIS_LOOP_18_1' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_doContrast_Pipeline_VITIS_LOOP_18_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_fmul_32ns_32ns_32_4_max_dsp_1' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/ip/doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:60]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:62649]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (1#1) [/tools/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:62649]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip' (18#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/ip/doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_fmul_32ns_32ns_32_4_max_dsp_1' (19#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_fdiv_32ns_32ns_32_16_no_dsp_1' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/ip/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip' (26#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/ip/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_fdiv_32ns_32ns_32_16_no_dsp_1' (27#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_flow_control_loop_pipe_sequential_init' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_flow_control_loop_pipe_sequential_init.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_flow_control_loop_pipe_sequential_init' (28#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_flow_control_loop_pipe_sequential_init.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_doContrast_Pipeline_VITIS_LOOP_18_1' (29#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_doContrast_Pipeline_VITIS_LOOP_18_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_ctrl_bus_s_axi' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_ctrl_bus_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_ctrl_bus_s_axi.v:209]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_ctrl_bus_s_axi.v:261]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_ctrl_bus_s_axi' (30#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_ctrl_bus_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_sitofp_32s_32_6_no_dsp_1' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_sitofp_32s_32_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_sitofp_32s_32_6_no_dsp_1_ip' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/ip/doContrast_sitofp_32s_32_6_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_sitofp_32s_32_6_no_dsp_1_ip' (38#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/ip/doContrast_sitofp_32s_32_6_no_dsp_1_ip.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_sitofp_32s_32_6_no_dsp_1' (39#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_sitofp_32s_32_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_regslice_both' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_regslice_both' (40#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_regslice_both__parameterized0' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_regslice_both__parameterized0' (40#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_regslice_both__parameterized1' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_regslice_both__parameterized1' (40#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_regslice_both__parameterized2' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_regslice_both__parameterized2' (40#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'doContrast_regslice_both__parameterized3' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast_regslice_both__parameterized3' (40#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doContrast' (41#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5df1/hdl/verilog/doContrast.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_doContrast_0_0' (42#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ip/design_1_doContrast_0_0/synth/design_1_doContrast_0_0.v:58]
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized23 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized72 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized89 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized89 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized89 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[30] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[29] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[28] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[27] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[26] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[25] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[24] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[23] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[22] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[21] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[20] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[19] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[18] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[17] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[16] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[15] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[14] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[13] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[12] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[11] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[10] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[9] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[8] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[7] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[6] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[5] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[4] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[3] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[2] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[1] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[0] in module fix_to_flt_conv_exp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized87 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized87 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized87 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized87 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized87 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[11] in module carry_chain__parameterized10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized70 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized68 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SIGN in module flt_round_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized74 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized74 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized74 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized74 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized74 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_6_viv__parameterized37 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_6_viv__parameterized37 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_6_viv__parameterized37 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_6_viv__parameterized37 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_6_viv__parameterized37 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[7] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[6] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[5] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[4] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[3] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[2] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[1] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EXP_OUT[0] in module renorm_and_round_logic__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2778.980 ; gain = 0.000 ; free physical = 1746 ; free virtual = 2363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2778.980 ; gain = 0.000 ; free physical = 1853 ; free virtual = 2491
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2778.980 ; gain = 0.000 ; free physical = 1853 ; free virtual = 2491
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2778.980 ; gain = 0.000 ; free physical = 1789 ; free virtual = 2441
+INFO: [Netlist 29-17] Analyzing 1516 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ip/design_1_doContrast_0_0/constraints/doContrast_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ip/design_1_doContrast_0_0/constraints/doContrast_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doContrast_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doContrast_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2842.879 ; gain = 0.000 ; free physical = 1655 ; free virtual = 2353
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  FDE => FDRE: 16 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2842.879 ; gain = 0.000 ; free physical = 1637 ; free virtual = 2336
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1476 ; free virtual = 2207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1475 ; free virtual = 2206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doContrast_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1475 ; free virtual = 2206
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'doContrast_ctrl_bus_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'doContrast_ctrl_bus_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'doContrast_ctrl_bus_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'doContrast_ctrl_bus_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1145 ; free virtual = 1886
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fmul_32ns_32ns_32_4_max_dsp_1_U1/doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fmul_32ns_32ns_32_4_max_dsp_1_U1/doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fmul_32ns_32ns_32_4_max_dsp_1_U1/doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized1) to 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fmul_32ns_32ns_32_4_max_dsp_1_U1/doContrast_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized41) to 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized41) to 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized1) to 'inst/grp_doContrast_Pipeline_VITIS_LOOP_18_1_fu_78/fdiv_32ns_32ns_32_16_no_dsp_1_U2/doContrast_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized1) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized1) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized41) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized41) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_INVALID_OP' (delay__parameterized1) to 'inst/sitofp_32s_32_6_no_dsp_1_U22/doContrast_sitofp_32s_32_6_no_dsp_1_ip_u/inst/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (ctrl_bus_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module doContrast.
+WARNING: [Synth 8-3332] Sequential element (ctrl_bus_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module doContrast.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1458 ; free virtual = 2333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 4251 ; free virtual = 5297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 4173 ; free virtual = 5265
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 4096 ; free virtual = 5203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1709 ; free virtual = 3420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1704 ; free virtual = 3414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1654 ; free virtual = 3366
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1654 ; free virtual = 3366
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1652 ; free virtual = 3364
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1650 ; free virtual = 3362
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    13|
+|2     |DSP48E1 |     3|
+|5     |LUT1    |    13|
+|6     |LUT2    |   171|
+|7     |LUT3    |   862|
+|8     |LUT4    |   107|
+|9     |LUT5    |   102|
+|10    |LUT6    |   177|
+|11    |MUXCY   |   747|
+|12    |MUXF7   |     3|
+|13    |SRL16E  |    35|
+|14    |SRLC32E |    17|
+|15    |XORCY   |   745|
+|16    |FDE     |    16|
+|17    |FDRE    |  1560|
+|18    |FDSE    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1649 ; free virtual = 3361
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 229 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 2842.879 ; gain = 0.000 ; free physical = 1718 ; free virtual = 3431
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:57 . Memory (MB): peak = 2842.879 ; gain = 63.898 ; free physical = 1718 ; free virtual = 3431
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2842.879 ; gain = 0.000 ; free physical = 2565 ; free virtual = 4279
+INFO: [Netlist 29-17] Analyzing 1527 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2842.879 ; gain = 0.000 ; free physical = 2541 ; free virtual = 4275
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 230 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 214 instances
+  FDE => FDRE: 16 instances
+
+Synth Design complete, checksum: 846cb677
+INFO: [Common 17-83] Releasing license: Synthesis
+77 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 2842.879 ; gain = 64.031 ; free physical = 2747 ; free virtual = 4481
+INFO: [Common 17-1381] The checkpoint '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doContrast_0_0_synth_1/design_1_doContrast_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_doContrast_0_0, cache-ID = 2b2c3be119134f07
+INFO: [Coretcl 2-1174] Renamed 235 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doContrast_0_0_synth_1/design_1_doContrast_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_doContrast_0_0_utilization_synth.rpt -pb design_1_doContrast_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  7 15:21:07 2022...

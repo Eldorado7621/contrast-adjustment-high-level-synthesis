@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="contrast_adjustment_app" location="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_app" platform="/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_pp/export/contrast_adjustment_pp/contrast_adjustment_pp.xpfm" platformUID="xilinx:zybo::0.0(custom)" systemProject="contrast_adjustment_app_system" sysConfig="contrast_adjustment_pp" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="129e5fb160583c430075a1955e63c53e">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.146487414" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1633376553" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

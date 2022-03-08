@@ -1,0 +1,397 @@
+
+*** Running vivado
+    with args -log design_1_doHist_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_doHist_0_0.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_doHist_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2784.754 ; gain = 7.953 ; free physical = 2527 ; free virtual = 4284
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doHist'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/doContrastIP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top design_1_doHist_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27321
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2784.887 ; gain = 0.000 ; free physical = 139 ; free virtual = 488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_doHist_0_0' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ip/design_1_doHist_0_0/synth/design_1_doHist_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'doHist' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist.v:12]
+INFO: [Synth 8-6157] synthesizing module 'doHist_doHist_Pipeline_VITIS_LOOP_12_1' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_doHist_Pipeline_VITIS_LOOP_12_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'doHist_flow_control_loop_pipe_sequential_init' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_flow_control_loop_pipe_sequential_init.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_flow_control_loop_pipe_sequential_init' (1#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_flow_control_loop_pipe_sequential_init.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_doHist_Pipeline_VITIS_LOOP_12_1' (2#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_doHist_Pipeline_VITIS_LOOP_12_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'doHist_doHist_Pipeline_VITIS_LOOP_19_2' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_doHist_Pipeline_VITIS_LOOP_19_2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_doHist_Pipeline_VITIS_LOOP_19_2' (3#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_doHist_Pipeline_VITIS_LOOP_19_2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'doHist_ctrl_bus_s_axi' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_ctrl_bus_s_axi.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_ctrl_bus_s_axi.v:193]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_ctrl_bus_s_axi.v:237]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_ctrl_bus_s_axi' (4#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_ctrl_bus_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'doHist_regslice_both' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_regslice_both' (5#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'doHist_regslice_both__parameterized0' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_regslice_both__parameterized0' (5#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'doHist_regslice_both__parameterized1' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_regslice_both__parameterized1' (5#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'doHist_regslice_both__parameterized2' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_regslice_both__parameterized2' (5#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'doHist_regslice_both__parameterized3' [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doHist_regslice_both__parameterized3' (5#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'doHist' (6#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ipshared/5cb5/hdl/verilog/doHist.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_doHist_0_0' (7#1) [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ip/design_1_doHist_0_0/synth/design_1_doHist_0_0.v:58]
+WARNING: [Synth 8-7129] Port WDATA[31] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[30] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[29] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[28] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[27] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[26] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[25] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[24] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[23] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[22] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[21] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[20] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[19] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[18] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[17] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[16] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[15] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[14] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[13] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[12] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[11] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[10] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[9] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[8] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[6] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[3] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[2] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[1] in module doHist_ctrl_bus_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TKEEP[0] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TSTRB[0] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TUSER[1] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TUSER[0] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TLAST[0] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TID[4] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TID[3] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TID[2] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TID[1] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TID[0] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TDEST[5] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TDEST[4] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TDEST[3] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TDEST[2] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TDEST[1] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inStream_TDEST[0] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[31] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[30] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[29] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[28] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[27] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[26] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[25] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[24] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[23] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[22] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[21] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[20] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[19] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[18] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[17] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[16] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[15] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[14] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[13] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[12] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[11] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[10] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[9] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[8] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[7] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[6] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[5] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[4] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[3] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[2] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[1] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[0] in module doHist_doHist_Pipeline_VITIS_LOOP_19_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[31] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[30] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[29] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[28] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[27] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[26] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[25] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[24] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[23] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[22] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[21] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[20] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[19] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[18] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[17] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[16] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[15] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[14] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[13] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[12] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[11] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[10] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[9] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port histo_Dout_A[8] in module doHist_doHist_Pipeline_VITIS_LOOP_12_1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2784.887 ; gain = 0.000 ; free physical = 2419 ; free virtual = 3014
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2784.887 ; gain = 0.000 ; free physical = 2644 ; free virtual = 3268
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2784.887 ; gain = 0.000 ; free physical = 2644 ; free virtual = 3268
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2784.887 ; gain = 0.000 ; free physical = 2614 ; free virtual = 3252
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ip/design_1_doHist_0_0/constraints/doHist_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.gen/sources_1/bd/design_1/ip/design_1_doHist_0_0/constraints/doHist_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doHist_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doHist_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2848.785 ; gain = 0.000 ; free physical = 2185 ; free virtual = 2948
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2848.785 ; gain = 0.000 ; free physical = 2177 ; free virtual = 2945
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 356 ; free virtual = 1781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 355 ; free virtual = 1781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doHist_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 354 ; free virtual = 1780
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'doHist_ctrl_bus_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'doHist_ctrl_bus_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'doHist_ctrl_bus_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'doHist_ctrl_bus_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 1184 ; free virtual = 2650
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               17 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 43    
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 3     
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 8     
+	   2 Input    2 Bit        Muxes := 10    
+	   2 Input    1 Bit        Muxes := 29    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (ctrl_bus_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module doHist.
+WARNING: [Synth 8-3332] Sequential element (ctrl_bus_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module doHist.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 1024 ; free virtual = 2568
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 568 ; free virtual = 2187
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 551 ; free virtual = 2170
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 536 ; free virtual = 2155
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 324 ; free virtual = 2017
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 323 ; free virtual = 2017
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 316 ; free virtual = 2015
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 315 ; free virtual = 2015
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 312 ; free virtual = 2014
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 311 ; free virtual = 2013
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    18|
+|2     |LUT1   |    20|
+|3     |LUT2   |    40|
+|4     |LUT3   |    52|
+|5     |LUT4   |    45|
+|6     |LUT5   |    32|
+|7     |LUT6   |    32|
+|8     |FDRE   |   165|
+|9     |FDSE   |    10|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 310 ; free virtual = 2013
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 63 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2848.785 ; gain = 0.000 ; free physical = 344 ; free virtual = 2063
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 2848.785 ; gain = 63.898 ; free physical = 344 ; free virtual = 2063
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2848.785 ; gain = 0.000 ; free physical = 359 ; free virtual = 2087
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2848.785 ; gain = 0.000 ; free physical = 342 ; free virtual = 2074
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 6675a064
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:31 . Memory (MB): peak = 2848.785 ; gain = 64.031 ; free physical = 527 ; free virtual = 2259
+INFO: [Common 17-1381] The checkpoint '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doHist_0_0_synth_1/design_1_doHist_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_doHist_0_0, cache-ID = 50022e19207cf8f8
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/sam/git_workspace/contrast-adjustment-high-level-synthesis/contrast_adjustment_vivado/contrast_adjustment_vivado.runs/design_1_doHist_0_0_synth_1/design_1_doHist_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_doHist_0_0_utilization_synth.rpt -pb design_1_doHist_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  7 15:21:39 2022...
